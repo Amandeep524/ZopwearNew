@@ -1,0 +1,42 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Zopwear
+    style
+        include ../static/style.css
+  body
+    header
+      nav
+        .topNav
+          .topNavItem
+            img.logo(src='../static/28378-2-sneaker-image.png', alt='Logo')
+            h3.logoPara Zopwear
+          .topNavItem
+            ul
+              li
+                a.active(href='#') Home
+              li
+                a About Us
+              li
+                a Career
+              li
+                a Contact Us
+          .topNavItem
+            button.topNavItemButton Call Us Now
+            button.topNavItemButton Email Us
+        .bottomNav
+          form.form(method='post', action='/')
+            label.formTitle Get Your Footwear At Your Doorstep
+            input.formInput(type='text', name='name', placeholder='Enter Your Name')
+            input.formInput(type='text', name='size', placeholder='Enter Your Size')
+            input.formInput(type='text', name='gender', placeholder='Enter Your Gender')
+            input.formInput(type='text', name='modelNumber', placeholder='Enter Item Model Number')
+            input.formInput(type='text', name='address', placeholder='Enter Your Address')
+            input.formInput(type='text', name='emailID', placeholder='Enter Your Email Id')
+            input.formInput(type='tel', name='phoneNumber', placeholder='Enter Your Phone Number')
+            button#formBtn.formButton(onclick='clicked()') Submit
+    script 
+        include ../static/index.js
